@@ -1,0 +1,177 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+
+export const SkillsPage: React.FC = () => {
+  const skillCategories = [
+    {
+      title: "Programming Languages",
+      skills: [
+        { name: "Perl", level: 95, icon: "🐪", color: "from-blue-500 to-cyan-500" },
+        { name: "Shell Scripting", level: 90, icon: "🐚", color: "from-green-500 to-blue-600" },
+        { name: "Python", level: 85, icon: "🐍", color: "from-yellow-500 to-blue-600" },
+        { name: "SQL", level: 88, icon: "🗄️", color: "from-blue-400 to-blue-600" },
+        { name: "React.js", level: 75, icon: "⚛️", color: "from-cyan-400 to-blue-500" }
+      ]
+    },
+    {
+      title: "Databases",
+      skills: [
+        { name: "MySQL", level: 90, icon: "🐬", color: "from-blue-500 to-blue-700" },
+        { name: "Oracle", level: 85, icon: "🔴", color: "from-red-500 to-orange-500" },
+        { name: "PostgreSQL", level: 82, icon: "🐘", color: "from-blue-400 to-blue-600" }
+      ]
+    },
+    {
+      title: "Testing & QA",
+      skills: [
+        { name: "ALM", level: 88, icon: "🎯", color: "from-purple-500 to-blue-500" },
+        { name: "Postman", level: 85, icon: "📬", color: "from-orange-500 to-red-500" },
+        { name: "JUnit", level: 82, icon: "🧪", color: "from-red-400 to-red-600" }
+      ]
+    },
+    {
+      title: "AI & ML",
+      skills: [
+        { name: "AI & ML Fundamentals", level: 85, icon: "🧠", color: "from-purple-500 to-pink-500" },
+        { name: "LangChain", level: 80, icon: "🔗", color: "from-green-500 to-blue-500" },
+        { name: "OpenAI API", level: 82, icon: "🤖", color: "from-green-500 to-blue-500" },
+        { name: "Cursor", level: 78, icon: "✏️", color: "from-blue-500 to-purple-500" },
+        { name: "Prompt Engineering", level: 75, icon: "💭", color: "from-yellow-400 to-orange-500" }
+      ]
+    },
+    {
+      title: "Observability Tools",
+      skills: [
+        { name: "IBM Tivoli (Netcool)", level: 92, icon: "🔍", color: "from-blue-500 to-blue-700" },
+        { name: "Nimsoft UIM", level: 90, icon: "📊", color: "from-purple-500 to-blue-500" },
+        { name: "New Relic", level: 88, icon: "📈", color: "from-orange-500 to-red-500" },
+        { name: "Splunk", level: 85, icon: "🔎", color: "from-orange-400 to-yellow-500" }
+      ]
+    },
+    {
+      title: "DevOps & Version Control",
+      skills: [
+        { name: "Jenkins", level: 88, icon: "⚙️", color: "from-red-500 to-orange-500" },
+        { name: "TeamCity", level: 85, icon: "🏗️", color: "from-blue-500 to-blue-700" },
+        { name: "Kubernetes", level: 82, icon: "⛵", color: "from-blue-400 to-blue-600" },
+        { name: "Docker", level: 85, icon: "🐳", color: "from-blue-500 to-blue-700" },
+        { name: "Git", level: 90, icon: "📝", color: "from-orange-500 to-red-600" },
+        { name: "SVN", level: 85, icon: "📦", color: "from-gray-500 to-gray-700" }
+      ]
+    }
+  ];
+
+  return (
+    <motion.div
+      className="min-h-screen p-6 pt-24 pb-28" // Adjusted bottom padding
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+    >
+      {/* Header */}
+      <motion.div
+        className="text-center mb-16"
+        initial={{ y: 30, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      >
+        <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent mb-6">
+          Skills & Expertise
+        </h1>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          A comprehensive overview of my technical skills and proficiency levels across various technologies and domains.
+        </p>
+      </motion.div>
+
+      {/* Skills Grid */}
+      <div className="max-w-7xl mx-auto">
+        {skillCategories.map((category, categoryIndex) => (
+          <motion.div
+            key={category.title}
+            className="mb-16"
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 + categoryIndex * 0.1 }}
+          >
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+              {category.title}
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {category.skills.map((skill, skillIndex) => (
+                <motion.div
+                  key={skill.name}
+                  className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-200 hover:border-gray-300 transition-all duration-300 hover:scale-105 shadow-lg"
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.4 + skillIndex * 0.1 }}
+                  whileHover={{ y: -5 }}
+                >
+                  <div className="flex items-center mb-4">
+                    <span className="text-3xl mr-3">{skill.icon}</span>
+                    <h3 className="text-xl font-semibold text-gray-900">{skill.name}</h3>
+                  </div>
+                  
+                  {/* Progress Bar */}
+                  <div className="mb-3">
+                    <div className="flex justify-between text-sm text-gray-600 mb-2">
+                      <span>Proficiency</span>
+                      <span>{skill.level}%</span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-2">
+                      <motion.div
+                        className={`h-2 rounded-full bg-gradient-to-r ${skill.color}`}
+                        initial={{ width: 0 }}
+                        animate={{ width: `${skill.level}%` }}
+                        transition={{ duration: 1, delay: 0.6 + skillIndex * 0.1 }}
+                      />
+                    </div>
+                  </div>
+                  
+                  {/* Skill Level Indicator */}
+                  <div className="flex items-center justify-between">
+                    <div className="flex space-x-1">
+                      {[...Array(5)].map((_, i) => (
+                        <div
+                          key={i}
+                          className={`w-2 h-2 rounded-full ${
+                            i < Math.floor(skill.level / 20) 
+                              ? 'bg-gradient-to-r from-purple-500 to-pink-500' 
+                              : 'bg-gray-300'
+                          }`}
+                        />
+                      ))}
+                    </div>
+                    <span className="text-xs text-gray-500">
+                      {skill.level >= 90 ? 'Expert' : 
+                       skill.level >= 80 ? 'Advanced' : 
+                       skill.level >= 70 ? 'Intermediate' : 'Beginner'}
+                    </span>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Additional Info */}
+      <motion.div
+        className="text-center mt-20 mb-10" // Reduced bottom margin
+        initial={{ y: 30, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.8 }}
+      >
+        <div className="bg-gradient-to-r from-purple-100 to-pink-100 rounded-3xl p-8 max-w-4xl mx-auto border border-purple-200">
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            🚀 Always Learning & Growing
+          </h3>
+          <p className="text-gray-700 text-lg">
+            I'm constantly expanding my skill set and exploring new technologies. 
+            Currently diving deep into AI/ML, cloud architecture, and emerging web technologies.
+          </p>
+        </div>
+      </motion.div>
+    </motion.div>
+  );
+};

@@ -1,0 +1,329 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+
+export const AboutMePage: React.FC = () => {
+
+  const experiences = [
+    {
+      year: "2022 - Present",
+      title: "Senior Tech Lead",
+      company: "HCL Tech (Deutsche Bank Client)",
+      description: "Application management and Project Automation. Integrating different services and tools like Netcool, Newrelic and ServiceNow Integration & MS Teams integration with Geneos. Managing servers and maintaining their health through Nimsoft and NRI. Writing perl modules, scripts, unit tests to automate various alerts and reports as per client requirement. Also working on LangChain and AI/ML models to create automation agents.",
+      skills: ["Perl", "Shell Scripting", "MySQL", "Netcool", "Newrelic", "ServiceNow", "Geneos", "Nimsoft", "NRI", "CI/CD", "Automation", "LangChain", "AI/ML"]
+    },
+    {
+      year: "2020 - 2022",
+      title: "Associate - Project",
+      company: "Cognizant Technology Solutions (Mastercard Client)",
+      description: "Application development and Database management. Implementing various protocols for Mastercard. Writing perl modules, scripts, unit tests for different projects as per client requirement.",
+      skills: ["Perl", "Shell Scripting", "MySQL", "Database Management", "Unit Testing", "Protocol Implementation"]
+    },
+    {
+      year: "2017 - 2020",
+      title: "IT Analyst",
+      company: "Tata Consultancy Services (Humana Inc. Client)",
+      description: "Application development and Database management. Designing jobs to automate processes like generating invoices, timesheet report etc. Writing perl modules for different projects as per the workflow given. Writing unit test case, sql query files and helper functions as required.",
+      skills: ["Perl", "Shell Scripting", "MySQL", "Database Management", "Automation", "Unit Testing"]
+    },
+    {
+      year: "2015 - 2017",
+      title: "Senior Member Tech",
+      company: "Aptroid Technologies Pvt. Ltd.",
+      description: "Automation tool designing, Log processing and Data analysis and management. Automating log processing. Automating the process of report generation, Sending mails of reports in real time. Report generation and analysing reports to increase the deliverability of campaigns.",
+      skills: ["Perl", "Shell Scripting", "MySQL", "Automation", "Log Processing", "Data Analysis", "Report Generation", "Database Management"]
+    },
+    {
+      year: "2014 - 2015",
+      title: "Project Associate",
+      company: "Zeta Global",
+      description: "Email Marketing and Data analytics. Worked on Email marketing analysis, automation tool designing, research and development. Wrote various automation scripts for PMTA monitoring, Email suppressions, Email sending.",
+      skills: ["Perl", "Shell Scripting", "MySQL", "Email Marketing", "Data Analytics", "Automation", "PMTA", "Zeta Mail"]
+    }
+  ];
+
+  const education = [
+    {
+      degree: "B.Tech in Electronics & Communication Engineering",
+      school: "Gandhi Institute of Engineering And Technology (BPUT)",
+      year: "2014",
+      description: "Specialization in Electronics & Communication Engineering with a focus on technical and engineering principles."
+    },
+    {
+      degree: "Class XII (Senior Secondary)",
+      school: "Triveni Academy +2 Science College (CHSE)",
+      year: "2010",
+      description: "Completed Senior Secondary education with a focus on Science, Mathematics, and Social Studies subjects, securing 78.7% marks."
+    },
+    {
+      degree: "Class X (Secondary)",
+      school: "Sivananda Centenary Boys' High School (BSE)",
+      year: "2008",
+      description: "Completed Secondary education emphasizing Science, Mathematics, and Social Studies, with a score of 81.4%."
+    }
+  ];
+
+  const achievements = [
+    {
+      title: "Best Performer Award",
+      description: "Honored with the Best Performer/Coder award by client Deutsche Bank for outstanding contributions, two years in a row.",
+      year: "2023, 2024",
+      icon: "🏆"
+    },
+    {
+      title: "Board of Studies (BoS) Member",
+      description: "Board of Studies (BoS) Member for the Undergraduate and Postgraduate programmes in the Department of Electronics and Communication Engineering for the academic session 2025–26., GIET University, Gunner",
+      year: "2025",
+      icon: "🎓"
+    },
+    {
+      title: "Best Renewable Project",
+      description: "Got Best Renewable Project award from Bhubaneswar Municipal Corporation for project \"UTILIZING RENEWABLE ENERY SOURCES FOR GREEN BBSR\"",
+      year: "2008",
+      icon: "🌱"
+    },
+    {
+      title: "Best Student",
+      description: "Received the Best Student and School Topper award at the Silver Jubilee celebration of Sivananda Centenary Boys' High School.",
+      year: "2011",
+      icon: "⭐"
+    }
+  ];
+
+  return (
+    <motion.div
+      className="min-h-screen p-6 pt-24 pb-28" // Adjusted bottom padding
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+    >
+      {/* Header */}
+      <motion.div
+        className="text-center mb-16"
+        initial={{ y: 30, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      >
+        <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent mb-6">
+          About Me
+        </h1>
+        <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+          Get to know me better - my journey, experience, and what drives me to create amazing digital experiences.
+        </p>
+      </motion.div>
+
+      <div className="max-w-7xl mx-auto">
+        {/* Personal Introduction */}
+        <motion.div
+          className="mb-20"
+          initial={{ y: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        >
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Hi, I'm Saswat 👋
+              </h2>
+              <p className="text-lg text-gray-800 mb-6 leading-relaxed">
+                I am a Senior Tech Lead with 11+ years of experience driving innovation across application development, automation, database management, and server management. My expertise spans Perl programming, Shell scripting, Python, MySQL, AI/ML, LangChain, and observability tools like Netcool, Nimsoft UIM, and New Relic.
+              </p>
+              <p className="text-lg text-gray-800 mb-6 leading-relaxed">
+                I began my career in Perl programming, building a strong foundation in automation and application management, and have since expanded into AI/ML, LangChain, and modern observability platforms. I've partnered with top global clients including Mastercard, Deutsche Bank, and Humana Inc., delivering solutions that improve efficiency, scalability, and resilience.
+              </p>
+              <div className="flex flex-wrap gap-4 mb-6">
+                <span className="px-4 py-2 bg-purple-100 text-purple-700 rounded-full border border-purple-200">
+                  🚀 Always Learning
+                </span>
+                <span className="px-4 py-2 bg-pink-100 text-pink-700 rounded-full border border-pink-200">
+                  💡 Problem Solver
+                </span>
+                <span className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full border border-blue-200">
+                  🤝 Team Player
+                </span>
+              </div>
+              
+              {/* Resume Download Button */}
+              <div className="flex gap-4">
+                <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg font-medium hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
+                  📄 Download Resume
+                </button>
+                <button className="bg-gray-100 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
+                  📧 Contact Me
+                </button>
+              </div>
+            </div>
+            
+            <div className="relative">
+              <div className="w-80 h-80 mx-auto rounded-full overflow-hidden border-4 border-purple-200 shadow-2xl">
+                <img 
+                  src="/skpai/saswat.jpeg" 
+                  alt="Saswat Patro - Professional Headshot" 
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    console.error('Image failed to load');
+                    e.currentTarget.src = 'saswat.jpeg';
+                  }}
+                />
+              </div>
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-2xl animate-bounce">
+                ⚡
+              </div>
+              <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-gradient-to-br from-green-500 to-teal-500 rounded-full flex items-center justify-center text-xl animate-pulse">
+                🎯
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Experience Timeline */}
+        <motion.div
+          className="mb-20"
+          initial={{ y: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+                  <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+          Professional Experience
+        </h2>
+          
+          <div className="space-y-8">
+            {experiences.map((exp, index) => (
+              <motion.div
+                key={exp.title}
+                className="relative"
+                initial={{ x: index % 2 === 0 ? -50 : 50, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.5 + index * 0.1 }}
+              >
+                <div className="flex items-start space-x-6">
+                  <div className="flex-shrink-0">
+                    <div className="w-4 h-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
+                    {index < experiences.length - 1 && (
+                      <div className="w-0.5 h-20 bg-gradient-to-b from-purple-500 to-pink-500 mx-auto"></div>
+                    )}
+                  </div>
+                  
+                  <div className="flex-1 bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-200 hover:border-gray-300 transition-all duration-300 hover:scale-105 shadow-lg">
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="text-sm text-purple-600 font-medium">{exp.year}</span>
+                      <span className="text-xs text-gray-600">{exp.company}</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{exp.title}</h3>
+                    <p className="text-gray-700 mb-4">{exp.description}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {exp.skills.map((skill) => (
+                        <span
+                          key={skill}
+                          className="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full border border-gray-200"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Education & Achievements */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+          {/* Education */}
+          <motion.div
+            initial={{ x: -50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">
+              Education
+            </h2>
+            
+            <div className="space-y-6">
+              {education.map((edu, index) => (
+                <motion.div
+                  key={edu.degree}
+                  className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-200 shadow-lg"
+                  initial={{ y: 30, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
+                >
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="text-lg font-semibold text-gray-900">{edu.degree}</h3>
+                    <span className="text-sm text-purple-600">{edu.year}</span>
+                  </div>
+                  <p className="text-gray-600 mb-2">{edu.school}</p>
+                  <p className="text-gray-700 text-sm">{edu.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Achievements */}
+          <motion.div
+            initial={{ x: 50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+          >
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">
+              Achievements
+            </h2>
+            
+            <div className="space-y-6">
+              {achievements.map((achievement, index) => (
+                <motion.div
+                  key={achievement.title}
+                  className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-200 shadow-lg"
+                  initial={{ y: 30, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
+                >
+                  <div className="flex items-center space-x-4">
+                    <div className="text-3xl">{achievement.icon}</div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold text-gray-900 mb-1">{achievement.title}</h3>
+                      <p className="text-gray-700 text-sm mb-2">{achievement.description}</p>
+                      <span className="text-xs text-purple-600">{achievement.year}</span>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Personal Values */}
+        <motion.div
+          className="text-center mb-10" // Reduced bottom margin
+          initial={{ y: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.9 }}
+        >
+                  <div className="bg-gradient-to-r from-purple-100 to-pink-100 rounded-3xl p-8 max-w-4xl mx-auto border border-purple-200">
+          <h3 className="text-2xl font-bold text-gray-900 mb-6">
+            🎯 My Values & Philosophy
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-gray-200 shadow-lg">
+              <div className="text-3xl mb-2">🌱</div>
+              <h4 className="font-semibold text-gray-900 mb-2">Continuous Growth</h4>
+              <p className="text-gray-700 text-sm">Always learning and improving my skills</p>
+            </div>
+            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-gray-200 shadow-lg">
+              <div className="text-3xl mb-2">💡</div>
+              <h4 className="font-semibold text-gray-900 mb-2">Innovation</h4>
+              <p className="text-gray-700 text-sm">Finding creative solutions to complex problems</p>
+            </div>
+            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-gray-200 shadow-lg">
+              <div className="text-3xl mb-2">🤝</div>
+              <h4 className="font-semibold text-gray-900 mb-2">Collaboration</h4>
+              <p className="text-gray-700 text-sm">Working together to achieve great results</p>
+            </div>
+          </div>
+        </div>
+        </motion.div>
+      </div>
+
+    </motion.div>
+  );
+};

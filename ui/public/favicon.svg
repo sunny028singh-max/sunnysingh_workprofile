@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="96" height="96" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <clipPath id="circle">
+      <circle cx="16" cy="16" r="14"/>
+    </clipPath>
+  </defs>
+  <circle cx="16" cy="16" r="14" fill="#fdf4ff" stroke="#9333ea" stroke-width="2"/>
+  <image xlink:href="skp_avatar.png" width="28" height="28" x="2" y="2" clip-path="url(#circle)"/>
+</svg>
